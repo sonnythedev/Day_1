@@ -1,0 +1,80 @@
+Javascript Day 1 
+
+10:00 - 12:00 
+          Topic to be discuss 
+               What is Javascript and creator of Javascript? 
+                https://en.wikipedia.org/wiki/Brendan_Eich
+            What is the difference between Javascript and other languages? 
+             
+            JavaScript is supposed to be for frontend tasks. Front end is what you have to
+            display to the end users. Other languages are specifically for handling 
+            backend server tasks. For example, Java, C++, .Net etc. etc.
+
+             What is frontend? 
+              Front End is what you display to the end users. These aren't supposed to be
+             secure or sensitive information, as it can be viewable by any one using the internet.
+             Example of frontend content is html, css, javascript files. Also assets or public folder
+             that has been set permission to be viewable by end users.
+
+            what are browsers, and why they behave differently?
+              
+               Browsers are programs or interface to surf/browse the internet. Browsers
+            render content sent from Server(Secured) to client's machine or computer.
+            Most of the browsers have certain level of standard as to rendering html
+            content. But different browser sometimes render elements differently or tries
+            enhance it. While some browser need plugin or upgrade to render content correctly.
+
+            what is a frontend and backend?
+
+            what is developer tool?
+               Developer tool is feature in browser, which let us examine various
+            part of rendered content. Such as html elements, network resources and 
+            console to test out javascript variables etc.
+
+             what is coding challenge?
+            -  first Javascript variables 'var', string, number, objects, boolean and 
+              console.log
+
+              JavaScript datatypes: number, string, boolean, array, object, undefined etc.
+              
+              var, let, const are variable modifier. 
+              var redeclares a variable. It also does something called hoisting: if a
+              variable doesn't exist it declares or hoist it.
+              let decleares a variable also creates a scope for the variable. we can't
+              use let for same variable in the same scope anymore
+              const makes a variable, object or function constant, or immutable.
+
+            - String
+             what is string in Javascript. 
+               String is a data type in js to represent textual variables: such as
+               words, texts etc.
+
+            introducing strings methods 
+              
+              Common string methods.
+               i. indexOf(str), indexOf(str, indextostart), lastIndexOf(str), 
+               includes(str), split(), length
+                
+                substring, substr, slice, splice 
+                str.replace(oldstr,newstr)
+                toLowerCase(), toUpperCase()
+                str.concat(str2,str3,str4...)
+              
+             
+             changing value of string 
+
+12:00 - 13:00
+Breakout/Lab 1
+explore string methods 
+visit https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+Write simple strings and console.log() strings value
+
+13:00 - 13:45 Lunch
+
+13:50 - 15:30 Instructor Led
+strings, variables, and numbers
+
+15:30 - 5:00 Breakout/Lab 2
+walk through string methods
+
