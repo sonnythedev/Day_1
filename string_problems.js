@@ -6,7 +6,8 @@ console.log('Hello from Term2 Day 1');
 
 /*
 Common string methods.
-               i. indexOf(str), indexOf(str, indextostart), lastIndexOf(str), 
+               i. indexOf(str), indexOf(str, indextostart), 
+               lastIndexOf(str), 
                includes(str), split(), length
                 
                 substring, substr, slice, splice 
@@ -16,106 +17,131 @@ Common string methods.
 
 //Problem 1: Find out the length of a string
 
+/* 
+Javascript Data Types:
+
+1. string  ---> 'I am a string', '', '123'
+2. boolean  ---> true/false 
+3. array   ----> [1,2,3], ['apple','orange','banana'], [1,'abc',true]
+4. object  ---> {
+                   'name':'John Doe',
+                   'occupation':'Coder',
+                   'age':'not telling',
+                    
+                }
+                
+5. number
+     a. Integer  -1,2,3,100 etc
+     b. Float   ->1.3
+     math library/class has many math related fucntion
+     math.round(2.3), math.ceil(2.3), math.random(), math.max()
+     math.min()
+
+     parseInt('123abc'), toFixed(2.343,2)
+
+6. null --->let x=null; let x;
+7. undefined ---> the variable doesn't exist
+
+== , ===
+
+5=='5' //true  if(x==='125'){
+
+               }
+5==='5' //false
+
+*/
+
 let str1="I am having a good good day"; //should be 22
 
-console.log(str1.length);
+console.log(str1,str1.length);
+
+
+console.log('index of good is:',str1.indexOf('good'));
+
+console.log('index of second good is:',str1.indexOf('good', str1.indexOf('good')+1));
+
+console.log('index of bad is:',str1.indexOf('bad'));
+
+console.log('last index of good is:',str1.lastIndexOf('good'));
 
 //Problem 2: Find out the index of certain string(if exists)
 
-console.log('index of good is:',str1.indexOf('good'));
-console.log('search good:',str1.search('good'));
+console.log('includes good?:',str1.includes('good')); //returns 
+//either true or false
+console.log('includes bad?:',str1.includes('bad'));
+//console.log('index of good is:',str1.indexOf('good'));
+
+//substring/substr
+
+str1="I like soccer";
+console.log('substr 0,6 is:',str1.substring(0,6));
+
+//toLowerCase(), toUpperCase()
+str1="I likE SoCCer";
+console.log('to lower case is:',str1.toLowerCase());
+console.log('to upper case is:',str1.toUpperCase());
+
+//concat
+
+str1="Have a";
+let str2="Good";
+let str3="Day";
+
+let output=str1.concat(' ',str2,' ',str3);
+console.log('output after concat is:',output);
+
+//split -> splits the string based on the delimeter passed on the second parameter
+let str="Jim*Michael*Danny*TheSupaStar";
+let arr=str.split('*');
+console.log('arr after splitting is:',arr);
+
+//typeof --> it's a operator, and it lets you check the data type of variable
+
+let a='I am a string';
+let b=25;
+let c='25';
+let d=[1,2,3,4,'banana',5,6];
+let e={}; 
+let f=null;
+let g=undefined;
+
+console.log('type of:',a,': ',typeof a);
+console.log('type of:',b,': ',typeof b);
+console.log('type of:',c,': ',typeof c);
+console.log('type of:',d,': ',typeof d);
+console.log('type of:',e,': ',typeof e);
+console.log('type of:',f,': ',typeof f);
+console.log(g);
+
+console.log('null and undefined comparison',null===undefined);
+
+////Continuation of some more string methods
+str1="I like like like you a lot";
+console.log('replace like with dislike(first occurance):',str1.replace('like','dislike'));
+console.log('replace like with dislike(globally):',str1.replace(/like/g,'dislike'));
+
+//charAt charCodeAt
+
+str1="AaBbCcDdEe123";
+console.log('charAt 0 is:',str1.charAt(0));
+console.log('charAt 1 is:',str1.charAt(1));
+console.log('charAt 10 is:',str1.charAt(9));
+
+console.log('charCodeAt 0 is:',str1.charCodeAt(0));
+console.log('charCodeAt 1 is:',str1.charCodeAt(1));
+console.log('charCodeAt 2 is:',str1.charCodeAt(2));
+console.log('charCodeAt 3 is:',str1.charCodeAt(3));
+
+console.log('charCodeAt 10 is:',str1.charCodeAt(10));
+
+//explore slice and splice methods on string
+str1="Have a nice day";
+//slice and substring/substr has same functionality
+console.log('slice at 0,5:',str1.slice(0,5));
+//console.log('splice at 0,5:',str1.splice(0,5));
 
 
-console.log('index of last good is:',str1.lastIndexOf('good'));
 
-//Problem 3: Find out if a string is part of string
-
-console.log('Does food exists?:',str1.includes('food'));
-console.log('Does day exists?:',str1.includes('day'));
-
-//Problem 4: Find substring/substr argument 1 is the strting index, argument 2 is the ending index
-
-
-console.log('Substr of day:',str1.substr(23,27));
-
-
-
-//Problem 5: Explore splice //Splice doesn't exist for string
-
-//Problem 6: explore replace function
-
-console.log('replace good with bad:',str1.replace('good','bad'));
-console.log('replace good with bad:',str1.replace(/good/g,'bad'));
-console.log(str1);
-
-console.log('Slice of str1:',str1.slice(23,27));
-console.log('str1:',str1);
-
-str1="I AM HAVING A nice DAY still!";
-
-console.log('demoing tolowercase:',str1.toLowerCase());
-console.log('demoing toUpperCase:',str1.toUpperCase());
-
-str1="I";
-let str2="Like";
-let str3="Smoothie";
-let str4="A lot";
-
-let output=str1.concat(' ',str2,' ',str3,' ',str4);
-console.log('concat few strings together:',output);
-
-//Problem 7: Demoing split function
-
-console.log('After split:',output.split(" "));
-
-console.log('After split then reverse:',output.split(" ").reverse());
-
-//Problem 8: Demoing repeat function
-
-str1="Goal!";
-
-console.log('repeat 5 times:',str1.repeat(5));
-
-//Problem 9 explore charAt and charCodeAt functions
-str1="AaBbCc123";
-console.log('char at 0 is:',str1.charAt(0));
-console.log('char at 2 is:',str1.charAt(2));
-
-console.log('char code at 0 is:',str1.charCodeAt(0));
-console.log('char code at 1 is:',str1.charCodeAt(1));
-console.log('char code at 2 is:',str1.charCodeAt(2));
-console.log('char code at 2 is:',str1.charCodeAt(3));
-console.log('char code at 6 is:',str1.charCodeAt(6));
-console.log('char code at 7 is:',str1.charCodeAt(7));
-
-//Problem 10: explore startsWith, endsWith
-
-str1="              Learning is           cool               ";
-
-console.log('starts With Learn:',str1.startsWith("Learn"));
-
-console.log('Ends With cool:',str1.endsWith("cool"));
-
-//Problem 11: Trim a string
-console.log('before trim:',str1);
-console.log('trim the string:',str1.trim());
-
-////function has a name. it might have parameters or function arguments.
-///it might do any type of calculation. It might return value. If it doesn't
-//return value, then when we call it, it wont return any value and will be undefined
-
-function addGreeting(name){
-    let output="Hello there "+name;
-    return output;
-}
-
-function doubleMe(num){
-     2*num;
-     //return 2*num;
-}
-
-console.log('addGreeting(sonny):',addGreeting('sonny'));
-console.log('doubleMe(num):',doubleMe(4));
 
 
 
