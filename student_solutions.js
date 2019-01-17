@@ -96,7 +96,7 @@ function isPalindrome_V2(str){
     
 }
 
-//Problem 5: Find count of word
+//Problem 5: Find count of words
 
 
 function findCountOfWord(str,word){
