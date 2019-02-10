@@ -88,11 +88,12 @@ let str2="Good";
 let str3="Day";
 
 let output=str1.concat(' ',str2,' ',str3);
+let output=str1+' '+str2+' '+str3;
 console.log('output after concat is:',output);
 
 //split -> splits the string based on the delimeter passed on the second parameter
 let str="Jim*Michael*Danny*TheSupaStar";
-let arr=str.split('*');
+let arr=str.split('');
 console.log('arr after splitting is:',arr);
 
 //typeof --> it's a operator, and it lets you check the data type of variable
